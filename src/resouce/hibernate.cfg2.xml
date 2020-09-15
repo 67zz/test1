@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+    <!-- 数据库连接配置 -->
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.url">jdbc:mysql://127.0.0.1:3306/text1?useUnicode=true&amp;characterEncoding=UTF-8</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">123</property>
+    <!-- SQL 方言 -->
+    <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <!-- Enable Hibernate's automatic session context management -->
+    <property name="current_session_context_class">thread</property>
+    <!-- 在控制台输出sql语句 -->
+    <property name="show_sql">true</property>
+    <!-- 在启动时根据配置更新数据库 -->
+    <property name="hbm2ddl.auto">update</property>
+    <mapping class="com.lovo.hibernate.entity.Powe"></mapping>
+   <mapping class="com.lovo.hibernate.entity.Role"></mapping>
+    <mapping class="com.lovo.hibernate.entity.RolePowe"></mapping>
+     <mapping class="com.lovo.hibernate.entity.UserEntity"></mapping>
+     <mapping class="com.lovo.hibernate.entity.UserRole"></mapping>
+</session-factory>
+
+</hibernate-configuration>
